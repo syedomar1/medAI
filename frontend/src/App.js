@@ -1,11 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-// import ContextState from "./context/notes/ContextState";
-import Alert from "./components/Alert";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+import Navbar from "./components/Navbar.js";
+import Home from "./components/Home.js";
+import About from "./components/About.js";
+import Alert from "./components/Alert.js";
+import Login from "./components/Login.js";
+import SignUp from "./components/Signup.js";
 import {useState} from 'react'
 
 
@@ -21,20 +20,18 @@ function App() {
   }
   return (
     <>
-      {/* <ContextState> */}
         <Router>
           <Navbar title="MedAI" aboutText="About" />
           <Alert alert={alert}/>
-          <div className="container">
+          <div className="container" style={{backgroundColor: "lightblue",minHeight:"50vh"}}>
             <Routes>
               <Route exact path="/" element={<Home showAlert={showAlert}/>} />
               <Route exact path="/about" element={<About />} />
               <Route exact path="/login" element={<Login showAlert={showAlert}/>} />
-              <Route exact path="/signup" element={<Signup showAlert={showAlert}/>} />
+              <Route exact path="/signup" element={<SignUp showAlert={showAlert}/>} />
             </Routes>
           </div>
         </Router>
-      {/* </ContextState> */}
     </>
   );
 }
