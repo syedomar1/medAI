@@ -2,6 +2,10 @@
 import React from 'react'
 import{Link, useLocation} from "react-router-dom";
 import {useNavigate} from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import './Navbar.css'
+>>>>>>> parent of fb9f50b (Minor changes)
 
 const Navbar = () => {
   let navigate = useNavigate();
@@ -16,7 +20,11 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
+<<<<<<< HEAD
     <Link className="navbar-brand" to="/">NoteDesk</Link>
+=======
+    <Link className="navbar-brand" to="/"><img src="/logo.png" alt="medAI Logo" style={{ width: '70px', height:'50px'}}/></Link>
+>>>>>>> parent of fb9f50b (Minor changes)
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 // import './Home.css'
 
@@ -46,6 +47,13 @@ const Home = (props) => {
         </div>
         <b className="about-us1">ABOUT US</b>
         <img className="frame-child" alt="Group 2" src="/group-2.svg" />
+=======
+export const Home = (props) => {
+    const {showAlert} = props
+    return (
+      <div>      
+        Hello
+>>>>>>> parent of fb9f50b (Minor changes)
       </div>
     </>
   );
