@@ -1,12 +1,10 @@
-
-
 import { useEffect, useRef } from "react";
 // import userimg from "../../assets/images/avatar-icon.png";
 import { NavLink, Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 const navLinks = [
   {
-    path: "/home",
+    path: "/",
     display: "Home",
   },
   {

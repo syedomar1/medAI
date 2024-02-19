@@ -36,7 +36,7 @@ const HomePage = () => {
                   Suscipit perspiciatis obcaecati quam harum mollitia pariatur
                   praesentium eaque, veniam placeat repellat?
                 </p>
-                <button className="btn"> Request an Appointment</button>
+                <button className="btn btn-primary rounded-lg"> Request an Appointment</button>
               </div>
               <div className="mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center lg:gap-[30px]">
                 <div>
@@ -190,7 +190,7 @@ const HomePage = () => {
                 </li>
               </ul>
               <Link to="/">
-                <button className="btn"> learn more</button>
+                <button className="btn btn-primary rounded-lg"> learn more</button>
               </Link>
             </div>
             {/* feature image  */}
