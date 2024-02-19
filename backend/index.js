@@ -1,14 +1,17 @@
-//rc071011ggmu
-//HcI2MICXkjrtIEph
-const express = require("express");
-const mongoose = require("mongoose");
-const User=require("./models/userModel.js");
-const app = express();
+const connectToMongo = require ('./db');
+const express = require('express')
+var cors = require('cors')
 
-const dbURL = "mongodb+srv://rc071011ggmu:HcI2MICXkjrtIEph@tester.y9jcw7x.mongodb.net/?retryWrites=true&w=majority";
+connectToMongo();
+const app = express()
+const port = 10000
 
-mongoose.connect(dbURL);
+app.use(cors())
+app.use(express.json())
 
-app.listen(8080,()=>{
-    console.log("server is running");
+//Available routes
+app.use('/api/auth',require('./routes/auth'))
+app.use('/api/notes',require('./routes/notes'))
+app.listen(port, () => {
+  console.log(`NoteDesk backend listening at http://127.0.0.1:${port}`)
 })
