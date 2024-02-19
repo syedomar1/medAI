@@ -2,7 +2,7 @@ export const Home = (props) => {
     const {showAlert} = props
     return (
       <div>      
-        Hello
+        <h1>medAI</h1>
       </div>
     );
   };
