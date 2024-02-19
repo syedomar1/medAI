@@ -1,43 +1,105 @@
-// import React,{useEffect} from 'react'
-import React from 'react'
-import{Link, useLocation} from "react-router-dom";
-import {useNavigate} from 'react-router-dom';
-import './Navbar.css';
+
+
+import { useEffect, useRef } from "react";
+// import userimg from "../../assets/images/avatar-icon.png";
+import { NavLink, Link } from "react-router-dom";
+import { BiMenu } from "react-icons/bi";
+const navLinks = [
+  {
+    path: "/home",
+    display: "Home",
+  },
+  {
+    path: "/doctors",
+    display: "Find a doctor",
+  },
+  {
+    path: "/services",
+    display: "services",
+  },
+  {
+    path: "/contact",
+    display: "contact",
+  },
+];
 
 const Navbar = () => {
-  let navigate = useNavigate();
-  const handleLogout =()=>{
-    localStorage.removeItem('token');
-    navigate("/login");
-  }
-  let location = useLocation();
-  // useEffect(() =>{
-  //   console.log(location.pathname );
-  // }, [location]);
-  return (
-    <nav className="navbar navbar-expand-lg">
-  <div className="container-fluid">
-    <Link className="navbar-brand" to="/"><img src="/logo2.png" alt="medAI Logo" style={{ width: '70px', height:'50px'}}/></Link>
-    <button className="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <Link className={`nav-link ${location.pathname ==="/"? "active" : ""}`} aria-current="page" to="/">Home</Link>
-        </li>
-        <li className="nav-item">
-          <Link className={`nav-link ${location.pathname ==="/about"? "active" : ""}`} to="/about">About</Link>
-        </li>
-      </ul>
-      {!localStorage.getItem('token')?<form className="d-flex">
-        <Link className="btn btn-primary mx-1" to="/login" role='button'>Login</Link>
-        <Link className="btn btn-primary mx-1" to="/signup" role='button'>Signup</Link>
-      </form> : <button onClick={handleLogout} className='btn btn-primary'>Logout</button>}
-    </div>
-  </div>
-</nav>
-  )
-}
+  const headerRef = useRef(null);
+  const menuRef = useRef(null);
 
-export default Navbar
+  const handleStickyHeader = () => {
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop ||
+        document > 80
+      ) {
+        headerRef.current.classList.add("sticky_header");
+      } else {
+        headerRef.current.classList.remove("sticky_header");
+      }
+    });
+  };
+  useEffect(() => {
+    handleStickyHeader();
+    return () => window.removeEventListener("scroll", handleStickyHeader);
+  });
+
+  const togglemenu = () => menuRef.current.classList.toggle("show__menu");
+  return (
+    <header className="header flex items-center" ref={headerRef}>
+      <div className="container">
+        <div className="flex items-center justify-between">
+          {/* ======logo====== */}
+          <div>
+            <img src="logo2.png" />
+          </div>
+          {/* ======menu====== */}
+          <div className="navigation" ref={menuRef} onClick={togglemenu}>
+            <ul className="menu flex items-center gap-[2.7rem]">
+              {navLinks.map((link, index) => (
+                <li key={index}>
+                  <NavLink
+                    to={link.path}
+                    className={(navClass) =>
+                      navClass.isActive
+                        ? "text-primaryColor text-[16px] leading-7 font-[600]"
+                        : "text-textColor text-[16px] leading-7 font-[500] hover:text-primaryColor"
+                    }
+                  >
+                    {link.display}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* -----------nav rigth--------- */}
+          <div className=" flex items-center gap-4 ">
+            <div>
+              {/* <Link to="/">
+                <figure className="w-[35px] h-[35px] rounded-full">
+                  <img src="./assets/homebg.png" className="w-full rounded-full" />
+                </figure>
+              </Link> */}
+            </div>
+            <Link to="/login">
+              <button className="bg-primaryColor py-2 px-6 text-white font[600] h-[44px] flex items-center  justify-center rounded-[50px]">
+                Login
+              </button>
+            </Link>
+            <Link to="/signup">
+              <button className="bg-primaryColor py-2 px-6 text-white font[600] h-[44px] flex items-center  justify-center rounded-[50px]">
+                SignUp
+              </button>
+            </Link>
+            <span className="md:hidden" onClick={togglemenu}>
+              <BiMenu className="w-6 h-6 cursor-pointer"></BiMenu>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;
