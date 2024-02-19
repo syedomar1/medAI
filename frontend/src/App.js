@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
-import ContextState from "./context/notes/ContextState";
+// import ContextState from "./context/notes/ContextState";
 import Alert from "./components/Alert";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
@@ -21,11 +21,11 @@ function App() {
   }
   return (
     <>
-      <ContextState>
+      {/* <ContextState> */}
         <Router>
           <Navbar title="MedAI" aboutText="About" />
           <Alert alert={alert}/>
-          <div className="container" style={{backgroundColor: "lightblue",minHeight:"50vh"}}>
+          <div className="container">
             <Routes>
               <Route exact path="/" element={<Home showAlert={showAlert}/>} />
               <Route exact path="/about" element={<About />} />
@@ -34,7 +34,7 @@ function App() {
             </Routes>
           </div>
         </Router>
-      </ContextState>
+      {/* </ContextState> */}
     </>
   );
 }
