@@ -2,6 +2,7 @@
 import React from 'react'
 import{Link, useLocation} from "react-router-dom";
 import {useNavigate} from 'react-router-dom';
+import  './Navbar.css'
 
 const Navbar = () => {
   let navigate = useNavigate();
@@ -14,7 +15,7 @@ const Navbar = () => {
   //   console.log(location.pathname );
   // }, [location]);
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg" style={{backgroundColor:'#00C6C6 !important'}}>
   <div className="container-fluid">
     <Link className="navbar-brand" to="/"><img src="/logo.png" alt="medAI Logo" style={{ width: '70px', height:'50px'}}/></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
