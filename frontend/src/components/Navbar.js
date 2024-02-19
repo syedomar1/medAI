@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/"><img src="/logo.png" alt="medAI Logo" style={{ width: '70px', height:'50px'}}/></Link>
+    <Link className="navbar-brand" to="/"><img src="/logo2.png" alt="medAI Logo" style={{ width: '70px', height:'50px'}}/></Link>
     <button className="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
