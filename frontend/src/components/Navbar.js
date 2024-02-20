@@ -1,20 +1,16 @@
-// import React,{useEffect} from 'react'
-import React from 'react'
-import{Link, useLocation} from "react-router-dom";
-import {useNavigate} from 'react-router-dom';
-import logo from "../assets/logo.png"
-// import './Navbar.css';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logo.png';
+import './Navbar.css';
 
 const Navbar = () => {
   let navigate = useNavigate();
-  const handleLogout =()=>{
+  const handleLogout = () => {
     localStorage.removeItem('token');
-    navigate("/login");
-  }
+    navigate('/login');
+  };
   let location = useLocation();
-  // useEffect(() =>{
-  //   console.log(location.pathname );
-  // }, [location]);
   return (
     <nav className="navbar sticky-top navbar-expand-lg">
       <div className="container-fluid">
@@ -38,17 +34,17 @@ const Navbar = () => {
 
         {/* Navbar Menu */}
         <div className="navbar-collapse navbar-light" id="navbarNav">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav mx-auto mb-2 mb-lg-0"> {/* Centering and equal spacing */}
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">
                 About Us
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -67,13 +63,13 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/nearest-clinic">
-                    Nearest Clinic
+                  <Link className="dropdown-item" to="/summary">
+                    Report Summarizer
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/summary">
-                    Report Summarizer
+                  <Link className="dropdown-item" to="/hospital">
+                    Nearest Clinic
                   </Link>
                 </li>
               </ul>
@@ -87,17 +83,17 @@ const Navbar = () => {
 
           {/* Login and Sign Up Buttons */}
           <div className="d-flex">
-            <Link className="btn btn-primary mx-2" to="/login" role="button">
+            <Link className="btn btn-primary mx-2 my-0" to="/login" role="button">
               Login
             </Link>
-            <Link className="btn btn-primary mx-2" to="/signup" role="button">
+            <Link className="btn btn-primary mx-2 my-0" to="/signup" role="button">
               Sign Up
             </Link>
           </div>
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

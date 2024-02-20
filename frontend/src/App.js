@@ -8,6 +8,8 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Chatbot from  "./components/Telebot";
 import Footer from  "./components/Footer";
+import Map from  "./components/Hospital";
+import TextSummarizer from  "./components/Summary";
 import {useState} from 'react';
 
 
@@ -34,7 +36,8 @@ function App() {
               <Route exact path="/login" element={<Login showAlert={showAlert}/>} />
               <Route exact path="/signup" element={<Signup showAlert={showAlert}/>} />
               <Route exact path="/telebot" element={<Chatbot showAlert={showAlert}/>} />
-              
+              <Route exact path="/hospital" element={<Map showAlert={showAlert}/>} />
+              <Route exact path="/summary" element={<TextSummarizer showAlert={showAlert}/>} />
             </Routes>
           </div>
             <Footer></Footer>
