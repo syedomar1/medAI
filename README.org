@@ -49,6 +49,8 @@ MedAI is a revolutionary medical AI chatbot designed to address the healthcare n
 * Features
 ** PPT made using suckless [sent](https://tools.suckless.org/sent/)
 
+** Personal scripts to create qr-code and upload file to 0x0.st
+
 ** PDF made using GNU Troff
 
 ** MedAI offers a range of features to provide accessible healthcare solutions:
