@@ -1,0 +1,23 @@
+#+TITLE: Org mode basics in doom emacs
+#+DESCRIPTION: Org doc to demostrate org mode
+#+AUTHOR: Amrit
+
+* TODO ORG HEADLINE 1
+** head 2
+** TODO head 3
+** head 4
+*** another head 2
+| exellent_column 1 | exellent_column 2 |     |   |
+| fart smella       | smella fart       |     |   |
+| felid 1           | feild 2           |     |   |
+|                   | hola              |     |   |
+| 1                 | 2                 | 3rd |   |
+|                   |                   |     |   |
+*** exellent_columns
+**** head
+*** headline 2
+- [] Itam1
+- [] item2
+** head 5
+NODE 20.9.0
+Python 3.11.8
