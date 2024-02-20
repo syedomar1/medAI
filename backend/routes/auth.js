@@ -51,15 +51,6 @@ router.post('/createuser', [
     console.error(error.message);
     res.status(500).send("Internal Server Error");
   }
-    // .then(user => res.json(user))
-    // .catch(err=> {console.log(err)})
-    // res.json({error: "Please enter a unique value"})
-    // res.json({error: "Please enter a unique value",message:err.message})
-
-    // console.log(req.body);
-    // const user = User(req.body);
-    // user.save();
-    // res.send(req.body);
 })
 
 // ROUTE 2: Authenticate a User using: POST "/api/auth/login". No login required

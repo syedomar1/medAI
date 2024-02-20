@@ -79,7 +79,6 @@ const Login = () => {
       const json = await response.json();
 
       if (response.ok) {
-        // Save the auth token and redirect
         localStorage.setItem("token", json.authtoken);
         navigate("/");
       } else {
