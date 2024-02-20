@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # #+TITLE: MedAI
 # #+DESCRIPTION: An ORG document to demonstrate the capabalities of MedAI
 # #+AUTHOR: Amritanshu Tripathy
@@ -26,7 +24,6 @@
 # NODE 20.9.0
 # Python 3.11.8
 
->>>>>>> 9e87ed4b025879791b464fbc8bc7ce663609218c
 #+TITLE: MedAI - Medical AI Chatbot
 #+AUTHOR: Amritanshu Tripathy
 
