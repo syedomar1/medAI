@@ -14,6 +14,10 @@
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import About from "./About.js";
+import pic from "../assets/homebg.png"
+import doc from "../assets/doctor.jpg"
+import hospital from "../assets/hospital.jpg"
+import text from "../assets/text.jpeg"
 import "./Home.css";
 // import ServiceList from "../components/services/serviceList";
 // import DoctorList from "./Doctors/DoctorList";
@@ -24,7 +28,7 @@ const HomePage = () => {
     <>
       <div className="HomePage">
       {/*  hero sections  */}
-      <section className="hero_section pt-[100px] 2xl:h-[800px]">
+      <section className="hero_section pt-[40px] 2xl:h-[550px]">
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-[90px] items-center justify-between">
             {/*   hero-content */}
@@ -66,11 +70,7 @@ const HomePage = () => {
             {/*    hero-content-end  */}
             <div className="flex gap-[30px] justify-end">
               <div>
-                <img src='./homebg.png' className="w-full" />
-              </div>
-              <div className="mt-[30px]">
-                <img src='./homebg.png' className="w-full mb-[30px]" />
-                <img src='./homebg.png' className="w-full" />
+                <img src={hospital} className="w-full" />
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]">
             <div className="py-[30px] px-5">
               <div className="flex items-center justify-center">
-                <img src='../assets/homebg.png' alt="" />
+                <img src={hospital} alt="" />
               </div>
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
@@ -110,7 +110,7 @@ const HomePage = () => {
             </div>
             <div className="py-[30px] px-5">
               <div className="flex items-center justify-center">
-                <img src='../assets/homebg.png' alt="" />
+                <img src={doc} alt="" />
               </div>
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
@@ -129,7 +129,7 @@ const HomePage = () => {
             </div>
             <div className="py-[30px] px-5">
               <div className="flex items-center justify-center">
-                <img src='../assets/homebg.png' alt="" />
+                <img src={text} alt="" />
               </div>
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">

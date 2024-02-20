@@ -1,0 +1,21 @@
+.footer {
+    background-color: #0a142f;
+    width: 100%;
+    color: #a8abb5;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly between the divs */
+    align-items: center;
+}
+
+.col-md-3 {
+    flex-grow: 1; /* Each div will grow equally to fill the available space */
+    margin: 0 10px; /* Add some margin between the divs for spacing */
+}
+
+.col-md-3 > img {
+    height: 10rem;
+    width: 30rem;
+}

@@ -1,4 +1,19 @@
 .navbar{
-    background-color:#a7e1e1;
-    background-image: url(../assets/logo.png);
+    background-color:#a7e1e1 !important;
+    background-size: 90%;
+}
+/* Hide the dropdown button visually */
+
+/* Override Bootstrap styles to show dropdown items */
+.dropdown-menu,.dropdown {
+    display: block;
+    position: static;
+    float: none;
+    border: none;
+    box-shadow: none;
+}
+
+.container-fluid {
+    display: flex;
+    align-items: center; /* Align items vertically */
 }

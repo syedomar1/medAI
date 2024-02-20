@@ -1,103 +1,103 @@
-import { useEffect, useRef } from "react";
-// import userimg from "../../assets/images/avatar-icon.png";
-import { NavLink, Link } from "react-router-dom";
-import { BiMenu } from "react-icons/bi";
-const navLinks = [
-  {
-    path: "/",
-    display: "Home",
-  },
-  {
-    path: "/doctors",
-    display: "Find a doctor",
-  },
-  {
-    path: "/services",
-    display: "services",
-  },
-  {
-    path: "/contact",
-    display: "contact",
-  },
-];
+// import React,{useEffect} from 'react'
+import React from 'react'
+import{Link, useLocation} from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
+import logo from "../assets/logo.png"
+// import './Navbar.css';
 
 const Navbar = () => {
-  const headerRef = useRef(null);
-  const menuRef = useRef(null);
-
-  const handleStickyHeader = () => {
-    window.addEventListener("scroll", () => {
-      if (
-        document.body.scrollTop > 80 ||
-        document.documentElement.scrollTop ||
-        document > 80
-      ) {
-        headerRef.current.classList.add("sticky_header");
-      } else {
-        headerRef.current.classList.remove("sticky_header");
-      }
-    });
-  };
-  useEffect(() => {
-    handleStickyHeader();
-    return () => window.removeEventListener("scroll", handleStickyHeader);
-  });
-
-  const togglemenu = () => menuRef.current.classList.toggle("show__menu");
+  let navigate = useNavigate();
+  const handleLogout =()=>{
+    localStorage.removeItem('token');
+    navigate("/login");
+  }
+  let location = useLocation();
+  // useEffect(() =>{
+  //   console.log(location.pathname );
+  // }, [location]);
   return (
-    <header className="header flex items-center" ref={headerRef}>
-      <div className="container">
-        <div className="flex items-center justify-between">
-          {/* ======logo====== */}
-          <div>
-            <img src="logo2.png" />
-          </div>
-          {/* ======menu====== */}
-          <div className="navigation" ref={menuRef} onClick={togglemenu}>
-            <ul className="menu flex items-center gap-[2.7rem]">
-              {navLinks.map((link, index) => (
-                <li key={index}>
-                  <NavLink
-                    to={link.path}
-                    className={(navClass) =>
-                      navClass.isActive
-                        ? "text-primaryColor text-[16px] leading-7 font-[600]"
-                        : "text-textColor text-[16px] leading-7 font-[500] hover:text-primaryColor"
-                    }
-                  >
-                    {link.display}
-                  </NavLink>
+    <nav className="navbar sticky-top navbar-expand-lg">
+      <div className="container-fluid">
+        {/* Brand Logo */}
+        <Link className="navbar-brand" to="/">
+          <img src={logo} alt="Logo" style={{ width: '70px', marginRight: '10px' }} />
+        </Link>
+
+        {/* Toggle Button */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        {/* Navbar Menu */}
+        <div className="navbar-collapse navbar-light" id="navbarNav">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">
+                About Us
+              </Link>
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <Link className="dropdown-item" to="/telebot">
+                    AI Doctor
+                  </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
-          {/* -----------nav rigth--------- */}
-          <div className=" flex items-center gap-4 ">
-            <div>
-              {/* <Link to="/">
-                <figure className="w-[35px] h-[35px] rounded-full">
-                  <img src="./assets/homebg.png" className="w-full rounded-full" />
-                </figure>
-              </Link> */}
-            </div>
-            <Link to="/login">
-              <button className="bg-primaryColor py-2 px-6 text-white font[600] h-[44px] flex items-center  justify-center rounded-[50px]">
-                Login
-              </button>
+                <li>
+                  <Link className="dropdown-item" to="/nearest-clinic">
+                    Nearest Clinic
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/summary">
+                    Report Summarizer
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item">
+              <Link className={`nav-link ${location.pathname === '/contact-us' ? 'active' : ''}`} to="/contact-us">
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+
+          {/* Login and Sign Up Buttons */}
+          <div className="d-flex">
+            <Link className="btn btn-primary mx-2" to="/login" role="button">
+              Login
             </Link>
-            <Link to="/signup">
-              <button className="bg-primaryColor py-2 px-6 text-white font[600] h-[44px] flex items-center  justify-center rounded-[50px]">
-                SignUp
-              </button>
+            <Link className="btn btn-primary mx-2" to="/signup" role="button">
+              Sign Up
             </Link>
-            <span className="md:hidden" onClick={togglemenu}>
-              <BiMenu className="w-6 h-6 cursor-pointer"></BiMenu>
-            </span>
           </div>
         </div>
       </div>
-    </header>
-  );
-};
+    </nav>
+  )
+}
 
-export default Navbar;
+export default Navbar
