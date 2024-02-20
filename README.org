@@ -46,8 +46,11 @@ MedAI is a revolutionary medical AI chatbot designed to address the healthcare n
 - [[#license][License]]
 
 * Features
+** PPT made using suckless [sent](https://tools.suckless.org/sent/)
 
-MedAI offers a range of features to provide accessible healthcare solutions:
+** PDF made using GNU Troff
+
+** MedAI offers a range of features to provide accessible healthcare solutions:
 
 | Feature                 | Description                                                                                                                |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -61,10 +64,9 @@ MedAI offers a range of features to provide accessible healthcare solutions:
 
 To use MedAI, follow these steps:
 
-1. Download the MedAI app from the Google Play Store or Apple App Store.
-2. Install the app on your smartphone.
-3. Upon installation, open the app and follow the on-screen instructions to set up your account.
-4. Once set up, you can start accessing the various features of MedAI.
+1. `npm i react-router-dom concurrently`
+2. `npm run both`
+3. Your app will be started.
 
 * Usage
 
