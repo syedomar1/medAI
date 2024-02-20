@@ -30,6 +30,6 @@ MedAI is committed to empowering underprivileged communities by integrating tech
 
 ## Contact Us
 
-If you have any questions, suggestions, or feedback, please feel free to reach out to us at [contact@medai.com](mailto:contact@medai.com). We're here to serve you and improve healthcare accessibility for everyone.
+If you have any questions, suggestions, or feedback, please feel free to reach out to us at @. We're here to serve you and improve healthcare accessibility for everyone.
 
 Thank you for choosing MedAI for your healthcare needs. Together, we can make a difference in healthcare accessibility worldwide.
