@@ -2,7 +2,7 @@
 # #+DESCRIPTION: An ORG document to demonstrate the capabalities of MedAI
 # #+AUTHOR: Amritanshu Tripathy
 
-./frontend/src/components/logo2.png
+[./frontend/src/components/logo2.png]
 
 # * MedAI
 # ** head 2
