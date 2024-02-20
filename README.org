@@ -2,7 +2,8 @@
 # #+DESCRIPTION: An ORG document to demonstrate the capabalities of MedAI
 # #+AUTHOR: Amritanshu Tripathy
 
-[[./frontend/src/components/logo.png]]
+[[./frontend/src/components/logo2.png]]
+
 
 # * MedAI
 # ** head 2
@@ -115,6 +116,9 @@ To use the AI bot for personalized health assessments:
 * CAUTION
  This website is *NOT* meant substitute a real doctor. Diagnosis from MedAI is to be taken with a /grain of salt/ and for any serious issues you *MUST* visit a real practicing physician
 * External Links
+
+[[qr_code.png]]
+
 
 - [MedAI Website](https://www.medai.com)
 - [MedAI Blog](https://blog.medai.com)
