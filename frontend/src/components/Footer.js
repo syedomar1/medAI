@@ -17,10 +17,11 @@ export default function Footer() {
                             K.K. Nagar (West), Chennai - 600078.
                         </p>
                         <p className="tel">Tel: +1 (925) 750 8475</p>
+                        <p className="copyright">© 2024 MedAI. All rights reserved.</p>
                     </div>
                 </div>
                 <div className="col-md-3">
-                    <p className="copyright">© 2024 MedAI. All rights reserved.</p>
+                    
                     <p className="links">
                         Blogs <br />
                         Case Studies <br />

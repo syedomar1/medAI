@@ -17,3 +17,13 @@
     display: flex;
     align-items: center; /* Align items vertically */
 }
+#navbarNav{
+    margin-left: 200px;
+    word-spacing: 50%;
+
+}
+
+.nav-link{
+    margin-right:2rem;
+    font-weight: 600;
+}

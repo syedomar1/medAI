@@ -1,66 +1,7 @@
-// import React, {useState} from 'react'
-// import {useNavigate} from 'react-router-dom';
-
-// const Signup = (props) => {
-//     const [credentials,setCredentials] = useState({name: "", email:"", password: "", cpassword: ""});
-//     let navigate = useNavigate();
-//     const handleSubmit = async(e) =>{
-//       e.preventDefault();
-//       const {name, email, password} = credentials
-//       const response = await fetch(`http://127.0.0.1:10000/api/auth/createuser`, {
-//           method: "POST",
-//           headers: {
-//             "Content-Type": "application/json",
-//           },
-//           body: JSON.stringify({name,email,password})
-//         });
-//         const json = await response.json()
-//         console.log(json)
-//         if(json.success){
-//           // Save the auth token and redirect
-//           localStorage.setItem("token", json.authtoken);
-//           navigate("/");
-//           props.showAlert("Account Created Successfully", "success")
-//         }
-//         else{
-//           props.showAlert(" User Aldready exists", "danger")
-//         }
-//   }
-//   const onChange = (e) => {
-//       setCredentials({ ...credentials, [e.target.name]: e.target.value });
-//     };
-//   return (
-//     <div className='mt-2'>
-//       <h2 className='my-2'>Create an account to use medAI</h2>
-//       <form onSubmit={handleSubmit} className='container'>
-//   <div className="my-3">
-//     <label htmlFor="name" className="form-label">Name</label>
-//     <input type="text" className="form-control" id="name" name='name' onChange={onChange} aria-describedby="emailHelp"/>
-//   </div>
-//   <div className="mb-3">
-//     <label htmlFor="email" className="form-label">Email address</label>
-//     <input type="email" className="form-control" id="email" name='email' onChange={onChange} aria-describedby="emailHelp"/>
-//     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-//   </div>
-//   <div className="mb-3">
-//     <label htmlFor="password" className="form-label">Password</label>
-//     <input type="password" className="form-control" id="password" name='password' minLength={5} required onChange={onChange}/>
-//   </div>
-//   <div className="mb-3">
-//     <label htmlFor="cpassword" className="form-label">Password</label>
-//     <input type="password" className="form-control" id="cpassword" name='cpassword' minLength={5} required onChange={onChange}/>
-//   </div>
-//   <button type="submit" className="btn btn-primary">Submit</button>
-// </form>
-//     </div>
-//   )
-// }
-
-// export default Signup
-
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import "./Signup.css";
+// import {signupimage} from "../assets/signup.jpg";
 const SignUp = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -100,15 +41,11 @@ const SignUp = () => {
   };
 
   return (
-    <section className="px-5 xl:px-0">
+    <div className="Sign-Up-Page">
+      {/* <img src={signupimage}></img> */}
+      <section className="main-sign-up px-5 xl:px-0">
       <div className="max-w-[1170px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          {/* imgbox */}
-          <div className="hidden lg:block bg-primaryColor rounded-l-lg">
-            <figure className="rounded-l-lg">
-              <img src='../assets/homebg.png' alt="" />
-            </figure>
-          </div>
           <div className="rounded-l-g lg:pl-16 py-11">
             <h3 className="text-headingColor text-[22px] leading-9 font-bold mb-2">
               Create an <span className="text-primaryColor"> Account</span>
@@ -185,6 +122,8 @@ const SignUp = () => {
         </div>
       </div>
     </section>
+    </div>
+    
   );
 };
 export default SignUp;

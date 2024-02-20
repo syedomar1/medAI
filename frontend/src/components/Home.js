@@ -70,14 +70,14 @@ const HomePage = () => {
             {/*    hero-content-end  */}
             <div className="flex gap-[30px] justify-end">
               <div>
-                <img src={hospital} className="w-full" />
+                <img src={pic} className="w-full" />
               </div>
             </div>
           </div>
         </div>
       </section>
       {/*   hero-section-end */}
-      <section>
+      <section className="pt-[150px]">
         <div className="container">
           <div className="lg:w-[470px] mx-auto">
             <h2 className="heading text-center">
@@ -101,7 +101,7 @@ const HomePage = () => {
                   No Worries! If you don't find the nearest hosptals. We have got you covered
                 </p>
                 <Link
-                  to="/hospitals"
+                  to="/hospital"
                   className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
                 >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
@@ -139,7 +139,7 @@ const HomePage = () => {
                   Too long and unable to read your reports? We can make things easier in finger tips for you to understand better
                 </p>
                 <Link
-                  to="/telebot"
+                  to="/summary"
                   className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
                 >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />

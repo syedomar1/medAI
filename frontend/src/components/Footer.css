@@ -1,7 +1,13 @@
 .footer {
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
     background-color: #0a142f;
     width: 100%;
     color: #a8abb5;
+    opacity: 60%;
+    z-index: 999;
+    margin-top:190px;
 }
 
 .container2 {

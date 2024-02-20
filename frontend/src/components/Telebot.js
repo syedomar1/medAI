@@ -49,32 +49,34 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="container-fluid2 h-100">
-      <div className="row justify-content-center h-100">
-        <div className="col-md-8 col-xl-6 chat">
-          <div className="card">
-            <div className="card-header msg_head">
+    <div style={{ height: "100%" }}>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }}>
+        <div className="chat" style={{ maxWidth: "600px", width: "100%" }}>
+          <div className="card" style={{ backgroundColor: "#f0f8ff", borderRadius: "15px" }}>
+            <div className="card-header msg_head" style={{ backgroundColor: "#6495ed", color: "#fff", borderRadius: "15px 15px 0 0" }}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                <img
+                  <img
                     src={logo}
-                    className="rounded-circle user_img_msg h-15 w-14"
-                    alt="bot_avatar"/>
+                    className="rounded-circle user_img_msg"
+                    alt="bot_avatar"
+                    style={{ width: "70px", height: "70px", objectFit: "cover" }}
+                  />
                   <span className="online_icon"></span>
                 </div>
-                <div className="user_info">
+                <div className="user_info" style={{ marginLeft: "10px" }}>
                   <h4>ChatBot</h4>
                   <p>Ask me anything!</p>
                 </div>
               </div>
             </div>
-            <div className="card-body msg_card_body">
+            <div className="card-body msg_card_body" style={{ maxHeight: "200px", overflowY: "auto" }}>
               {messages.map((message, index) => (
                 <div key={index}>{message}</div>
               ))}
               <div ref={messagesEndRef} />
             </div>
-            <div className="card-footer">
+            <div className="card-footer" style={{ backgroundColor: "#f0f8ff", borderRadius: "0 0 15px 15px" }}>
               <form className="input-group" onSubmit={handleSubmit}>
                 <input
                   type="text"
@@ -83,11 +85,12 @@ const Chatbot = () => {
                   placeholder="Type your message..."
                   autoComplete="off"
                   className="form-control type_msg"
+                  style={{ borderRadius: "15px 0 0 15px" }}
                   onChange={(e) => setInputText(e.target.value)}
                   required
                 />
                 <div className="input-group-append">
-                  <button type="submit" className="input-group-text send_btn">
+                  <button type="submit" className="input-group-text send_btn" style={{ borderRadius: "0 15px 15px 0" }}>
                     <i className="fas fa-location-arrow"></i>
                   </button>
                 </div>

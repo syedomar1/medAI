@@ -1,0 +1,8 @@
+.container-SignUp{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+  }
+  .container-SignUp img{
+    height: 200px;
+  }
