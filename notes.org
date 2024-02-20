@@ -1,23 +1,123 @@
-#+TITLE: Org mode basics in doom emacs
-#+DESCRIPTION: Org doc to demostrate org mode
-#+AUTHOR: Amrit
+# #+TITLE: MedAI
+# #+DESCRIPTION: An ORG document to demonstrate the capabalities of MedAI
+# #+AUTHOR: Amritanshu Tripathy
 
-* TODO ORG HEADLINE 1
-** head 2
-** TODO head 3
-** head 4
-*** another head 2
-| exellent_column 1 | exellent_column 2 |     |   |
-| fart smella       | smella fart       |     |   |
-| felid 1           | feild 2           |     |   |
-|                   | hola              |     |   |
-| 1                 | 2                 | 3rd |   |
-|                   |                   |     |   |
-*** exellent_columns
-**** head
-*** headline 2
-- [] Itam1
-- [] item2
-** head 5
-NODE 20.9.0
-Python 3.11.8
+# * MedAI
+# ** head 2
+# ** TODO head 3
+# ** head 4
+# *** another head 2
+# | exellent_column 1 | exellent_column 2 |     |   |
+# | fart smella       | smella fart       |     |   |
+# | felid 1           | feild 2           |     |   |
+# |                   | hola              |     |   |
+# | 1                 | 2                 | 3rd |   |
+# |                   |                   |     |   |
+# *** exellent_columns
+# **** head
+# *** headline 2
+# - [] Itam1
+# - [] item2
+# ** head 5
+# NODE 20.9.0
+# Python 3.11.8
+
+#+TITLE: MedAI - Medical AI Chatbot
+#+AUTHOR: Amritanshu Tripathy
+
+* Introduction
+
+MedAI is a revolutionary medical AI chatbot designed to address the healthcare needs of underprivileged communities living in remote areas with limited access to hospitals. Leveraging the advancements in internet technology, MedAI aims to deliver medical solutions directly to households through smartphones. This README file provides a comprehensive guide to using MedAI, outlining its features, functionalities, and how to get started.
+
+* Table of Contents
+
+- [[#features][Features]]
+- [[#installation][Installation]]
+- [[#usage][Usage]]
+  - [[#nearest-hospital-finder][Nearest Hospital Finder]]
+  - [[#medical-report-decipher][Medical Report Decipher]]
+  - [[#community-page][Community Page]]
+  - [[#general-information][General Information]]
+  - [[#ai-bot][AI Bot]]
+- [[#external-links][External Links]]
+- [[#contributing][Contributing]]
+- [[#license][License]]
+
+* Features
+
+MedAI offers a range of features to provide accessible healthcare solutions:
+
+| Feature                 | Description                                                                                                                |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| Nearest Hospital Finder | Helps users locate the nearest hospitals in case of emergencies, ensuring prompt access to medical care.                   |
+| Medical Report Decipher | Translates complex medical reports into easily understandable language, enabling users to comprehend their health status. |
+| Community Page          | Facilitates discussions, education, and mutual support among users, fostering a sense of community and shared knowledge.  |
+| General Information     | Provides comprehensive information on various health issues crucial for raising awareness in rural areas.                 |
+| AI Bot                  | Offers personalized health assessments by analyzing user-input symptoms, enabling early intervention and advice.          |
+
+* Installation
+
+To use MedAI, follow these steps:
+
+1. Download the MedAI app from the Google Play Store or Apple App Store.
+2. Install the app on your smartphone.
+3. Upon installation, open the app and follow the on-screen instructions to set up your account.
+4. Once set up, you can start accessing the various features of MedAI.
+
+* Usage
+
+** Nearest Hospital Finder
+
+To find the nearest hospitals:
+
+1. Open the MedAI app.
+2. Navigate to the "Nearest Hospital Finder" feature.
+3. Allow location access.
+4. The app will display a list of nearby hospitals along with their contact information and directions.
+
+** Medical Report Decipher
+
+To decipher medical reports:
+
+1. Open the MedAI app.
+2. Go to the "Medical Report Decipher" section.
+3. Upload the medical report document.
+4. The app will process the document and provide a simplified interpretation.
+
+** Community Page
+
+To engage with the community:
+
+1. Access the "Community Page" from the app's menu.
+2. Browse ongoing discussions or start your own.
+3. Share knowledge, ask questions, and interact with other users.
+
+** General Information
+
+To access general health information:
+
+1. Navigate to the "General Information" section.
+2. Browse through various health topics such as PCOD, cancer, diabetes, etc.
+3. Learn about symptoms, treatments, and preventive measures.
+
+** AI Bot
+
+To use the AI bot for personalized health assessments:
+
+1. Open the AI bot feature.
+2. Input your symptoms or health concerns.
+3. The bot will analyze the data and provide personalized recommendations or advice.
+
+* External Links
+
+- [MedAI Website](https://www.medai.com)
+- [MedAI Blog](https://blog.medai.com)
+- [MedAI Support Page](https://support.medai.com)
+
+* Contributing
+
+If you'd like to contribute to MedAI, please refer to our [Contribution Guidelines](https://github.com/medai/contributing).
+
+* License
+
+MedAI is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
