@@ -108,8 +108,8 @@ To use the AI bot for personalized health assessments:
 2. Input your symptoms or health concerns.
 3. The bot will analyze the data and provide personalized recommendations or advice.
 
-> [!CAUTION]
-> This website is *NOT* meant substitute a real doctor. Diagnosis from MedAI is to be taken with a /grain of salt/ and for any serious issues you *MUST* visit a real practicing physician
+* CAUTION
+ This website is *NOT* meant substitute a real doctor. Diagnosis from MedAI is to be taken with a /grain of salt/ and for any serious issues you *MUST* visit a real practicing physician
 * External Links
 
 - [MedAI Website](https://www.medai.com)
