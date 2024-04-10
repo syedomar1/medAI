@@ -2,7 +2,8 @@
 # #+DESCRIPTION: An ORG document to demonstrate the capabalities of MedAI
 # #+AUTHOR: Amritanshu Tripathy
 
-[[./frontend/src/components/logo.png]]
+[[./frontend/src/components/logo2.png]]
+
 
 # * MedAI
 # ** head 2
@@ -46,8 +47,13 @@ MedAI is a revolutionary medical AI chatbot designed to address the healthcare n
 - [[#license][License]]
 
 * Features
+** PPT made using suckless [sent](https://tools.suckless.org/sent/)
 
-MedAI offers a range of features to provide accessible healthcare solutions:
+** Personal scripts to create qr-code and upload file to 0x0.st
+
+** PDF made using GNU Troff
+
+** MedAI offers a range of features to provide accessible healthcare solutions:
 
 | Feature                 | Description                                                                                                                |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -61,10 +67,9 @@ MedAI offers a range of features to provide accessible healthcare solutions:
 
 To use MedAI, follow these steps:
 
-1. Download the MedAI app from the Google Play Store or Apple App Store.
-2. Install the app on your smartphone.
-3. Upon installation, open the app and follow the on-screen instructions to set up your account.
-4. Once set up, you can start accessing the various features of MedAI.
+1. `npm i react-router-dom concurrently`
+2. `npm run both`
+3. Your app will be started.
 
 * Usage
 
@@ -113,6 +118,9 @@ To use the AI bot for personalized health assessments:
 * CAUTION
  This website is *NOT* meant substitute a real doctor. Diagnosis from MedAI is to be taken with a /grain of salt/ and for any serious issues you *MUST* visit a real practicing physician
 * External Links
+
+[[qr_code.png]]
+
 
 - [MedAI Website](https://www.medai.com)
 - [MedAI Blog](https://blog.medai.com)

@@ -75,35 +75,22 @@ The AI Bot is an intelligent virtual assistant that offers personalized health a
 .heading "Installation"
 
 .SH 
-Nearest Hospital Finder
+Initialize App
 
 .PP
-Helps users locate the nearest hospitals in case of emergencies, ensuring prompt access to medical care.
+npm i 
 
 .SH 
-Medical Report Decipher
+Combine frontend and backend 
 
 .PP 
-Translates complex medical reports into easily understandable language, enabling users to comprehend their health status.
+npm i react-router-dom concurrently
 
 .SH 
-Community Page
+Start App
 
 .PP 
-Facilitates discussions, education, and mutual support among users, fostering a sense of community and shared knowledge.
-
-.SH 
-General Information
-
-.PP 
-Provides comprehensive information on various health issues crucial for raising awareness in rural areas.
-
-.SH 
-AI Bot
-
-.PP 
-Offers personalized health assessments by analyzing user-input symptoms, enabling early intervention and advice.
-
+npm run both
 
 \m[default]
 .heading "\m[red]DISCLAIMER\m[]"
