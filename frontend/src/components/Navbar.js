@@ -40,11 +40,11 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">
                 About Us
               </Link>
-            </li> */}
+            </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"

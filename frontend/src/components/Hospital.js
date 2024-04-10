@@ -3,7 +3,7 @@ import React from 'react';
 const Map = () => {
     return (
         <div className="w-full h-screen mx-auto my-auto">
-            <h1 className="text-center">Google Maps</h1>
+            <h1 className="text-center">Find Nearby Hospital</h1>
             <iframe
                 className="w-full h-full"
                 style={{ border: '0' }}
