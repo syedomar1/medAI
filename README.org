@@ -4,27 +4,6 @@
 
 [[./frontend/src/components/logo2.png]]
 
-
-# * MedAI
-# ** head 2
-# ** TODO head 3
-# ** head 4
-# *** another head 2
-# | exellent_column 1 | exellent_column 2 |     |   |
-# | fart smella       | smella fart       |     |   |
-# | felid 1           | feild 2           |     |   |
-# |                   | hola              |     |   |
-# | 1                 | 2                 | 3rd |   |
-# |                   |                   |     |   |
-# *** exellent_columns
-# **** head
-# *** headline 2
-# - [] Itam1
-# - [] item2
-# ** head 5
-# NODE 20.9.0
-# Python 3.11.8
-
 #+TITLE: MedAI - Medical AI Chatbot
 #+AUTHOR: Amritanshu Tripathy
 
@@ -47,11 +26,6 @@ MedAI is a revolutionary medical AI chatbot designed to address the healthcare n
 - [[#license][License]]
 
 * Features
-** PPT made using suckless [sent](https://tools.suckless.org/sent/)
-
-** Personal scripts to create qr-code and upload file to 0x0.st
-
-** PDF made using GNU Troff
 
 ** MedAI offers a range of features to provide accessible healthcare solutions:
 
@@ -119,7 +93,7 @@ To use the AI bot for personalized health assessments:
  This website is *NOT* meant substitute a real doctor. Diagnosis from MedAI is to be taken with a /grain of salt/ and for any serious issues you *MUST* visit a real practicing physician
 * External Links
 
-[[qr_code.png]]
+[[./docs/qr_code.png]]
 
 
 - [MedAI Website](https://www.medai.com)
